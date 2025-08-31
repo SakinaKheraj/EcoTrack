@@ -77,10 +77,8 @@ function ReportForm() {
   timestamp: Timestamp.now(),
   userId: user.uid,
   userEmail: user.email,
-  userName: user.displayName || "Anonymous",
+  points: 10 // assign 10 points per report
 });
-
-
 
       setStatus("✅ Report submitted successfully!");
       setPhoto(null);

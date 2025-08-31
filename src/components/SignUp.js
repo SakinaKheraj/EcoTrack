@@ -28,7 +28,8 @@ function Signup() {
       await setDoc(doc(db, "users", user.uid), {
         name,
         email,
-      });
+        role: "community" // default role
+    });
 
       navigate("/login"); // redirect to login after signup
     } catch (err) {

@@ -51,45 +51,39 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-green-100" id="features">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-12">
-            Key Features of the System
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Mobile App Reporting</h3>
-              <p>
-                Allow users to report illegal activities through a mobile app or
-                SMS with geotagging.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">
-                Satellite & AI Integration
-              </h3>
-              <p>
-                Utilize satellite data and AI for anomaly detection and report
-                validation.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Gamification</h3>
-              <p>
-                Encourage participation through leaderboards, rewards, and
-                badges.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Real-time Data</h3>
-              <p>
-                Provide authorities with real-time data for faster action and
-                enforcement.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="py-20 bg-green-100" id="features">
+  <div className="max-w-screen-xl mx-auto text-center">
+    <h2 className="text-3xl font-semibold mb-12">
+      Key Features of the System
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-4">Mobile & Web Reporting</h3>
+        <p>
+          Users can report illegal activities via the web or mobile, with photos and geolocation data.
+        </p>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-4">Automated Validation</h3>
+        <p>
+          Reports are automatically validated based on basic rules like photo and location, helping authorities focus on genuine incidents.
+        </p>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-4">Map Visualization</h3>
+        <p>
+          All reports are visualized on a map with markers clustered for easier navigation and identification of hotspots.
+        </p>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold mb-4">Analytics & Leaderboard</h3>
+        <p>
+          Real-time charts and leaderboards show reporting trends, top contributors, and overall impact for better decision-making.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Impact Section */}
       <section className="py-20 px-6" id="impact">

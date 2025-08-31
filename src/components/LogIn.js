@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
@@ -12,9 +13,21 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/report"); // go to ReportForm after login
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // 🔑 Fetch user role from Firestore
+      const userDoc = await getDoc(doc(db, "users", user.uid));
+      const role = userDoc.exists() ? userDoc.data().role : "community";
+
+      // 🚦 Navigate based on role
+      if (role === "admin") {
+        navigate("/dashboard"); // authority side
+      } else {
+        navigate("/report"); // community side
+      }
     } catch (err) {
+      console.error(err);
       setError("❌ Invalid email or password");
     }
   };
